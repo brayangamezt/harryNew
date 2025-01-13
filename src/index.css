@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hogwarts-background{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sub-background{
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 7s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.cinzel-decorative-regular {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .cinzel-decorative-bold {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .cinzel-decorative-black {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.guides{
+    height: 100vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.explanation{
+    width:0%;
+	height: 100%;
+	position: absolute;
+	bottom:0;
+	left: 0;
+	right: 0;
+	background-color:rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+	transition: 0.5s ease;
+}
+
+
+/*ESTILOS PARA EL TITULO DE LAS GUIAS*/
+.guias-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.guias-title::after, .guias-title::before{
+    content: '';
+    flex: 1;
+    border-top: 2px solid white;
+    margin: 30px;
+}
+
+
+
+/* EFECTO OVERLAY PARA MOSTRAR INFORMACINO EN LAS GUIAS */
+.overlay-container{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* PLAYERS SIDE */
+.players-side{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.players-side .players-container{
+    padding-bottom: 10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.personal-avatar{
+    border-bottom: 1px solid white;
+}
+
+
+/*CONTENEDOR DE CARTAS*/
+.card-container{
+    padding-bottom: 10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+/* TEAMS PAGE */
+
+
+.select-team{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.select-team::before, .select-team::after{
+    content: '';
+    flex: 1;
+    border-top: 2px solid white;
+    margin: 30px;
+}
+
+.shadow{
+    box-shadow: 6px 4px 4px white;
+}
+
+.house{
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+.house:hover{
+    cursor: pointer;
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.teams-container{
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.team-card{
+    display: flex;
+    justify-content: center;
+}
+
+.cards-team{
+    overflow: scroll;
+    padding-bottom: 2px;
+}
+
+.cards-team::-webkit-scrollbar{
+    height: 8px;
+    background-color: transparent;
+}
+
+.cards-team::-webkit-scrollbar-thumb {
+    background-color: grey; /* Color del "thumb" (la parte que se arrastra) */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.cards-team::-webkit-scrollbar:vertical {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+  
