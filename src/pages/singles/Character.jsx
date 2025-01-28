@@ -164,7 +164,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
                 {
                     startGame ?
                         <>
-                            <img src={ selectedCard.img } alt={ selectedCard.name } className="w-4/5 h-2/4 rounded rounded-lg block md:h-3/4" />
+                            <img src={ selectedCard.img } alt={ selectedCard.name } className="lg:w-3/5 lg:h-2/4 rounded rounded-lg block md:h-3/4" />
                             <span className="mt-2 text-white cinzel-decorative-regular" > { selectedCard.name } </span>
                             <div className="mt-6 flex justify-center" >
                                 <button 
