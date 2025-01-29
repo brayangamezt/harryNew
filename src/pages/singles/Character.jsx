@@ -6,7 +6,7 @@ import Tiking from '../../../public/assets/audios/ticking.mp3';
 import ErrorAudio from '../../../public/assets/audios/incorrect.mp3'
 import Correct from '../../../public/assets/audios/correct.mp3'
 
-export const Character = ({players, setPlayers,setObteined, obteined, turn,setTurn}) =>{
+export const Character = ({players, setPlayers,setObteined, obteined, turn,setTurn, setDisabledButton}) =>{
 
     const [startGame, setStartGame] = useState(false);
     const [next, setNext] = useState( false );
@@ -107,6 +107,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
     const handleStartGame = () =>{
         setStartGame( true );
         setNext( true );
+        setDisabledButton(true);
         const maxNumber = cards.length;
 
         let number = 0;

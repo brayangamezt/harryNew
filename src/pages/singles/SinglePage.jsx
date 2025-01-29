@@ -9,6 +9,7 @@ import Hogwarts from '../../../public/assets/imgs/hogwarts.jpg';
 const SinglePage = () =>{
 
     const [newPlayer,setNewPLayer] = useState('');
+    const [disabledButton, setDisabledButton] = useState(false);
     const [players, setPlayers] = useState([]);
     const [turn, setTurn] = useState(0);
     const [open, setOpen] = useState(false);
@@ -27,11 +28,14 @@ const SinglePage = () =>{
         setSelectedAvatar( null );
     };
 
+    const handleReset = () =>{
+        setPlayers([]);
+        setDisabledButton(false);
+    }
+
     const handleOpen = () => setOpen(true);
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+    const handleClose = () => setOpen(false);
 
     return(
         <>
@@ -77,7 +81,18 @@ const SinglePage = () =>{
 
                         <div className='w-full mt-6 text-xl font-medium text-gray-900' >
                             <h3 className='mb-6 cinzel-decorative-bold text-white text-center cinzel-decorative-regular' > Jugadores </h3>
-                            <p className='mb-6 cinzel-decorative-bold text-white' > Jugador en turno: { players.length > 0 && players[turn].name } </p>
+                            <p className='mb-6 cinzel-decorative-bold text-white flex justify-between items-center' >
+                                <span> Jugador en turno: { players.length > 0 && players[turn].name } </span>
+                                {
+                                    players.length > 0 && 
+                                    <button 
+                                        className="bg-yellow-600 px-6 py-2 text-white rounded rounded-lg cinzel-decorative-regular" 
+                                        onClick={ handleReset }
+                                    > 
+                                        Reiniciar juego
+                                    </button>
+                                }
+                            </p>
                             {
                                 players.length <= 0 
                                 ? 
@@ -86,7 +101,14 @@ const SinglePage = () =>{
                                 <ul className='w-full' >
                                     {
                                         players.map( (player, index)=>(
-                                            <AvatarComponent player = { player } setPlayers = { setPlayers } players = { players } obteined = { obteined }  key={index}/>
+                                            <AvatarComponent 
+                                                player = { player } 
+                                                setPlayers = { setPlayers } 
+                                                players = { players } 
+                                                obteined = { obteined }  
+                                                key={index} 
+                                                disabledButton = {disabledButton}
+                                            />
                                         ) )
                                     }
                                 </ul>
@@ -96,7 +118,15 @@ const SinglePage = () =>{
                     </div>
                 </div>
                 <div className="lg:w-2/4 flex justify-center items-center md:w-full" >
-                        <Character players = { players } setPlayers = { setPlayers } setObteined = { setObteined } obteined={obteined} turn = {turn} setTurn = { setTurn } />
+                        <Character 
+                            players = { players } 
+                            setPlayers = { setPlayers } 
+                            setObteined = { setObteined } 
+                            obteined={obteined} 
+                            turn = {turn} 
+                            setTurn = { setTurn } 
+                            setDisabledButton = { setDisabledButton }
+                        />
                 </div>
            </div>
            { open && <ModalAvatars handleClose = { handleClose } open = { open } setSelectedAvatar = { setSelectedAvatar } /> }

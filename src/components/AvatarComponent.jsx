@@ -4,7 +4,7 @@ import RecentActorsIcon from '@mui/icons-material/RecentActors';
 import { ObteinedAvatars } from '../components/ObteinedAvatars';
 
 
-export const AvatarComponent = ({player, setPlayers, players, obteined}) =>{
+export const AvatarComponent = ({player, setPlayers, players, obteined, disabledButton}) =>{
 
     const [open, setOpen] = useState(false);
     const [cards, setCards] = useState([]);
@@ -34,8 +34,9 @@ export const AvatarComponent = ({player, setPlayers, players, obteined}) =>{
                 <div className="w-2/5 flex" >
                     <button 
                         type="button" 
-                        className="ml-2 px-6 py-2 rounded rounded-lg bg-red-800 text-white p-0 "
+                        className="ml-2 px-6 py-2 rounded rounded-lg bg-red-800 text-white p-0 disabled:opacity-30"
                         onClick={ handleDelete }
+                        disabled = { disabledButton }
                     >
                         Eliminar
                     </button> 
