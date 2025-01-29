@@ -10,7 +10,7 @@ const TeamsPageLazy = lazy( ()=> import('../pages/teams/TeamsPage.jsx') );
 
 export const router = createBrowserRouter([
     {
-        path:'/home',
+        path:'/harryNew',
         element:<App/>,
         children:[
             {
@@ -37,11 +37,11 @@ export const router = createBrowserRouter([
     },
     {
         path:'/',
-        element:<Navigate to = '/home' />
+        element:<Navigate to = '/harryNew' />
     },
     {
         path: '*',
-        element: <Navigate to = '/home' />
+        element: <Navigate to = '/harryNew' />
     }
     
 ])

@@ -10,16 +10,16 @@ export const Menu = () =>{
                 </div>
                 <ul className=' w-4/5 flex justify-between md:p-2 md:w-full' > 
                     <li className='text-white w-1/4 flex justify-center items-center text-3xl cinzel-decorative-regular hover:underline cursor-pointer' > 
-                        <Link to='/home' > Principal </Link>
+                        <Link to='/harryNew' > Principal </Link>
                     </li>
                     <li className='text-white w-1/4 flex justify-center items-center text-3xl cinzel-decorative-regular hover:underline cursor-pointer' >
-                        <Link to='/home/singles' > Individual </Link>
+                        <Link to='/harryNew/singles' > Individual </Link>
                     </li>
                     <li className='text-white w-1/4 flex justify-center items-center text-3xl cinzel-decorative-regular hover:underline cursor-pointer' >
-                        <Link to='/home/teams' > Equipos </Link>
+                        <Link to='/harryNew/teams' > Equipos </Link>
                     </li>
                     <li className='text-white w-1/4 flex justify-center items-center text-3xl cinzel-decorative-regular hover:underline cursor-pointer' >
-                        <Link to='/home/guias' > Guias </Link>
+                        <Link to='/harryNew/guias' > Guias </Link>
                     </li>
                 </ul>
             </nav>
