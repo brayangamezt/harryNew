@@ -1,4 +1,4 @@
-import{r as s,S as n,j as e,L as l}from"./index-CjWAinuj.js";const o="https://brayangamezt.github.io/harryNew/assets/harryPotterTheme-BYaSzBVT.mp4",c="https://brayangamezt.github.io/harryNew/assets/merodeador-NYeDn6po.png",u=()=>{const a=s.useRef(null),[t,r]=s.useState(!1);return s.useEffect(()=>{n.fire({html:`
+import{r as s,S as n,j as e,L as l}from"./index-JjOkWjXZ.js";const o="https://brayangamezt.github.io/harryNew/assets/harryPotterTheme-BYaSzBVT.mp4",c="https://brayangamezt.github.io/harryNew/assets/merodeador-NYeDn6po.png",u=()=>{const a=s.useRef(null),[t,r]=s.useState(!1);return s.useEffect(()=>{n.fire({html:`
                 <p class = "text-2xl text-white cinzel-decorative-bold " > Carta de aceptacion </p>
                 <p class = "text-white cinzel-decorative-regular " > Que tal muggle, te damos la bienvenida al mundo magico </p>
                 <p class = "text-white cinzel-decorative-regular " > de harry potter, donde para ingresas tendras que jurar </p>
