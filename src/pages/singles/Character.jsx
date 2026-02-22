@@ -27,7 +27,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
             setObteined([]);
             setSelectedCard( null );
             setDeletedNumber([]);
-            setSeconds(25);
+            setSeconds(40);
             setPlayers([]);
         }
     },[players] );
@@ -128,7 +128,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
     }
 
     const handleNext = () =>{
-        setSeconds( 25 );
+        setSeconds( 40 );
         setNext( true );
         const maxNumber = cards.length;
         let number = 0;
@@ -154,7 +154,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
         setObteined([]);
         setSelectedCard( null );
         setDeletedNumber([]);
-        setSeconds(25);
+        setSeconds(40);
         setPlayers([]);
     }
 
