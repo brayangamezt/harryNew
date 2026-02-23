@@ -39,7 +39,7 @@ const SinglePage = () =>{
 
     return(
         <>
-           <div className="w-full h-screen flex lg:flex-row overflow-hidden players-side object-cover md:flex-col" 
+           <div className="w-full h-screen flex lg:flex-row overflow-scroll players-side object-cover md:flex-col" 
                 style={ {backgroundImage:`url(${Hogwarts})`} }
                 >
                 <div className="lg:w-2/4 p-10 md:w-full" >
