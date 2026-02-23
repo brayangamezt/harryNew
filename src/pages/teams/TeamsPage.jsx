@@ -21,7 +21,7 @@ const TeamsPage = () =>{
 
     return(
         <>
-            <main className="w-full h-screen overflow-hidden" style={ {backgroundImage:`url(${Stars}), linear-gradient(rgb(18, 11, 14), rgb(71, 64, 131) 121.35%)`} } >
+            <main className="w-full h-screen overflow-scroll" style={ {backgroundImage:`url(${Stars}), linear-gradient(rgb(18, 11, 14), rgb(71, 64, 131) 121.35%)`} } >
 
                 <header className="flex flex-col justify-center items-center" >
 
