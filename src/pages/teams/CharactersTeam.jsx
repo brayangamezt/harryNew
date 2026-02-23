@@ -8,7 +8,7 @@ import Correct from '../../../public/assets/audios/correct.mp3'
 
 export const CharactersTeam = ({teams, setTeams, turn, setTurn, obteined, setObteined}) =>{
     const [startGame, setStartGame] = useState(false);
-    const [seconds, setSeconds] = useState(25);
+    const [seconds, setSeconds] = useState(45);
     const [selectedCard, setSelectedCard] = useState(null);
     const [deletedNumber, setDeletedNumber] = useState([]);
     const [next, setNext] = useState( false );
@@ -112,7 +112,7 @@ export const CharactersTeam = ({teams, setTeams, turn, setTurn, obteined, setObt
 
     //funcion para obtener la siguiente carta
     const handleNext = () =>{
-        setSeconds( 25 );
+        setSeconds( 45 );
         setNext( true );
         const maxNumber = cards.length;
         let number = 0;
@@ -138,7 +138,7 @@ export const CharactersTeam = ({teams, setTeams, turn, setTurn, obteined, setObt
         setStartGame( false );
         setSelectedCard( null );
         setDeletedNumber([]);
-        setSeconds(25);
+        setSeconds(45);
         setTeams( [] );
     }
 
