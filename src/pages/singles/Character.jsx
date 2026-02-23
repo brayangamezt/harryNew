@@ -10,7 +10,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
 
     const [startGame, setStartGame] = useState(false);
     const [next, setNext] = useState( false );
-    const [seconds, setSeconds] = useState(60);
+    const [seconds, setSeconds] = useState(50);
     const [cards, setCards] = useState( cardsCharacters );
     const [selectedCard, setSelectedCard] = useState(null);
     const [deletedNumber, setDeletedNumber] = useState([]);
