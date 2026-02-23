@@ -10,7 +10,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
 
     const [startGame, setStartGame] = useState(false);
     const [next, setNext] = useState( false );
-    const [seconds, setSeconds] = useState(40);
+    const [seconds, setSeconds] = useState(60);
     const [cards, setCards] = useState( cardsCharacters );
     const [selectedCard, setSelectedCard] = useState(null);
     const [deletedNumber, setDeletedNumber] = useState([]);
@@ -27,7 +27,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
             setObteined([]);
             setSelectedCard( null );
             setDeletedNumber([]);
-            setSeconds(40);
+            setSeconds(50);
             setPlayers([]);
         }
     },[players] );
@@ -128,7 +128,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
     }
 
     const handleNext = () =>{
-        setSeconds( 40 );
+        setSeconds( 50 );
         setNext( true );
         const maxNumber = cards.length;
         let number = 0;
@@ -154,7 +154,7 @@ export const Character = ({players, setPlayers,setObteined, obteined, turn,setTu
         setObteined([]);
         setSelectedCard( null );
         setDeletedNumber([]);
-        setSeconds(40);
+        setSeconds(50);
         setPlayers([]);
     }
 
